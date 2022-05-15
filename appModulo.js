@@ -19,7 +19,7 @@ read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qu�
         read.question("Ingrese el nuevo texto al documento: ", (nuevoTexto) =>{
             const AdditionalContent = `\n${nuevoTexto}`;
             fs.appendFile('./NuevoDocumento.xls', AdditionalContent, (err) => {
-                if(err) throw("Ha ocurrido un error");
+                if(err) throw("Error, intentelo de nuevo");
                 console.log("El documento ha sido creado");
             });
         })
@@ -28,7 +28,7 @@ read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qu�
         read.question("Ingrese el nuevo texto al documento: ", (nuevoTexto) =>{
             const AdditionalContent = `\n${nuevoTexto}`;
             fs.appendFile('./NuevoDocumento.csv', AdditionalContent, (err) => {
-                if(err) throw("Ha ocurrido un error");
+                if(err) throw("Error, intentelo de nuevo");
                 console.log("El documento a sido creado");
             });
         })
