@@ -11,7 +11,7 @@ let read = readline.createInterface({
 });
 
 //Estructura de verificacion de respuestas del usuario y formulacion de preguntas
-read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qué desas hacer? Ingresar OPCION1 para crear archivos xls - Ingresar OPCION2 para crear archivos csv - Ingresar OPCION3 para convertir archivo xls a JSON : ", (opcion) => {
+read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qué desas hacer? Ingresar OPCION1 para crear archivos xls - Ingresar OPCION2 para crear archivos csv - Ingresar OPCION3 para convertir archivo xls a JSON - Ingresar OPCION4 para convertir xls a csv : ", (opcion) => {
     console.log("");
 
     //Opcion 1 trabajar con archivos xlsx
@@ -35,13 +35,12 @@ read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qu�
     
     //Opcion 3 leer archivo xlsx en JSON
     } else if (opcion == "OPCION3"){
-      var XLSX = require("xlsx");
       const xlsxToJson = () =>{
-        const converJSON = XLSX.readFile('./pelis.xlsx');
+        const converJSON = xlsx.readFile('./pelis.xlsx');
         var nombreHojas = converJSON.SheetNames;
-        let datos = XLSX.utils.sheet_to_json(converJSON.Sheets[nombreHojas[0]]);
+        let datos = xlsx.utils.sheet_to_json(converJSON.Sheets[nombreHojas[0]]);
         console.log(datos);
       };
       xlsxToJson();
-    }        
+    }    
 });
