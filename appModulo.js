@@ -11,7 +11,7 @@ let read = readline.createInterface({
 });
 
 //Estructura de verificacion de respuestas del usuario y formulacion de preguntas
-read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qué desas hacer? Ingresar OPCION1 para crear archivos xls - Ingresar OPCION2 para crear archivos csv - Ingresar OPCION3 para convertir archivo xls a JSON - Ingresar OPCION4 para convertir xls a csv : ", (opcion) => {
+read.question("Hola! ʕ◉ᴥ◉ʔ formulemos archivos de textos. Primero, ¿Qué desas hacer? Ingresar OPCION1 para crear archivos xls - Ingresar OPCION2 para crear archivos csv - Ingresar OPCION3 para convertir archivo xls a JSON : ", (opcion) => {
     console.log("");
 
     //Opcion 1 trabajar con archivos xlsx
